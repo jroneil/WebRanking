@@ -1,4 +1,4 @@
-package com.oneil.ranking;
+
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
