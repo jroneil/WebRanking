@@ -24,7 +24,7 @@ public class RanksRepositoryImpl implements RanksRepositoryCustom{
 		logger.info("RanksRepositoryImpl-----------retrieveTop5Ranks---");
 		String sql = "SELECT r FROM Ranks r where r.recDate=:recDate";
 		Query query = entityManager.createQuery(sql);
-		query.setParameter("recDate", recDate, TemporalType.DATE);
+		query.setParameter("recDate", recDate);//, TemporalType.DATE); for mysql
 		query.setFirstResult(0);
 		query.setMaxResults(5);
 		
