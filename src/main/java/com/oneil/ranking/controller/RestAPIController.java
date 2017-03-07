@@ -40,7 +40,6 @@ public class RestAPIController {
 	//get top 5 ranks
 	@RequestMapping(value= "/rank/search", produces = MediaType.APPLICATION_JSON_VALUE ,method = RequestMethod.GET)
 	  public Iterable<Ranks> getSearch(HttpServletRequest servletRequest,@RequestParam(value="recDate")String  recDate){
-		logger.info("recDate1----------------------"+recDate);
 		SimpleDateFormat formatter = new SimpleDateFormat("mm-dd-yyyy");
         Date date=null;
 		try {
