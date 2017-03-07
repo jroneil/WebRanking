@@ -11,7 +11,7 @@
  
         <div ui-view></div>
         
-		 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		 <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
 		<script src="js/lib/jquery-ui-1.12.1.custom/jquery-ui.js" ></script>
         <script src="js/lib/angular.min.js" ></script>
         <script src="js/lib/angular-ui-router.min.js" ></script>
