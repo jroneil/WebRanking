@@ -1,5 +1,5 @@
 'use strict';
-
+ 
 angular.module('rankApp').controller('RankController',
     ['RankService', '$scope',  function( RankService, $scope) {
 

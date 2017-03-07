@@ -1,5 +1,5 @@
 'use strict';
-
+ 
 angular.module('rankApp').factory('RankService',
     ['$localStorage', '$http', '$q', 'urls',
         function ($localStorage, $http, $q, urls) {
