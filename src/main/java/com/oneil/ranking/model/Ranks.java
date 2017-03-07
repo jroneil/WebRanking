@@ -25,8 +25,8 @@ public class Ranks implements Serializable {
 	private String website;
 	
 	@Column(name = "rec_date", columnDefinition="DATETIME")
-	@Temporal(TemporalType.DATE)
-	@JsonFormat(pattern = "MM/dd/yyyy")
+	@Temporal(TemporalType.TIMESTAMP)
+	@JsonFormat(pattern = "MM-dd-yyyy")
 	private Date recDate;
 	@Column(name = "visits", nullable = false)
 	private int visits;
