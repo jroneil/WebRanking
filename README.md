@@ -2,8 +2,10 @@
 # WebRanking
 #Rest Springboot Example with FreeMaker Templates
 
-Top 5 page
+Home page(with links to all the links below
 https://salty-everglades-55386.herokuapp.com/RanksApp/#/
+Top 5 page
+https://salty-everglades-55386.herokuapp.com/RanksApp/#/top5
 
 Admin Page
 https://salty-everglades-55386.herokuapp.com/RanksApp/#/admin
