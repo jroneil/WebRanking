@@ -22,7 +22,7 @@ public class RanksRepositoryImpl implements RanksRepositoryCustom{
 	@Override
 	public List<Ranks> retrieveTop5Ranks( Date recDate) {
 		logger.info("RanksRepositoryImpl-----------retrieveTop5Ranks---");
-		String sql = "SELECT r FROM Ranks r where r.recDate=:recDate";
+		String sql = "SELECT r FROM Ranks r where r.recDate=:recDate order by r.visits";
 		Query query = entityManager.createQuery(sql);
 		query.setParameter("recDate", recDate, TemporalType.DATE);
 		query.setFirstResult(0);
