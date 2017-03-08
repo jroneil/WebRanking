@@ -115,7 +115,7 @@ public class RestAPIController {
 	 
 	        if (currentRanks == null) {
 	            logger.error("Unable to update. Ranks with id {} not found.", id);
-	            return new ResponseEntity(new CustomErrorType("Unable to upate. Ranks with id " + id + " not found."),
+	            return new ResponseEntity(new CustomErrorType("Unable to update. Ranks with id " + id + " not found."),
 	                    HttpStatus.NOT_FOUND);
 	        }
 	 
