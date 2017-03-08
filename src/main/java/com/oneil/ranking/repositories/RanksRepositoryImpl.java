@@ -35,7 +35,7 @@ public class RanksRepositoryImpl implements RanksRepositoryCustom{
 
 	@Override
 	public List<Ranks> retrieveTop10Ranks(Date recDate) {
-		String sql = "SELECT r FROM Ranks r where r.recDate=:recDate order by r.recDate ";
+		String sql = "SELECT r FROM Ranks r where r.recDate=:recDate order by r.visits ";
 		Query query = entityManager.createQuery(sql);
 		query.setParameter("recDate", recDate);
 		query.setFirstResult(0);
