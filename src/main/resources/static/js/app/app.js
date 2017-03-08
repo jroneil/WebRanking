@@ -1,7 +1,7 @@
 var app = angular.module('rankApp',['ui.router','ngStorage']);
 var host = "https://"+window.location.hostname;
 if(host.includes("localhost")){
-	host="http://"+window.location.hostname+":8080";
+	host="https://"+window.location.hostname+":8080";
 	
 }
 app.constant('urls', {
