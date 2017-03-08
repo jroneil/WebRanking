@@ -53,16 +53,23 @@ public class JpaConfiguration {
  
     /*
      * Configure HikariCP pooled DataSource.
+     * Heroku use the System variable CLEARDB_DATABASE_URL the Properties change now and then 
+     * If they change you do not have to worry rather than hard coding them
      */
     @Bean
     public DataSource dataSource() {
+        URI dbUri = new URI(System.getenv("CLEARDB_DATABASE_URL"));
+
+        String username = dbUri.getUserInfo().split(":")[0];
+        String password = dbUri.getUserInfo().split(":")[1];
+        String dbUrl = "jdbc:mysql://" + dbUri.getHost() + dbUri.getPath();
         DataSourceProperties dataSourceProperties = dataSourceProperties();
             HikariDataSource dataSource = (HikariDataSource) DataSourceBuilder
                     .create(dataSourceProperties.getClassLoader())
                     .driverClassName(dataSourceProperties.getDriverClassName())
-                    .url(dataSourceProperties.getUrl())
-                    .username(dataSourceProperties.getUsername())
-                    .password(dataSourceProperties.getPassword())
+                    .url(dbUrl)
+                    .username(username)
+                    .password(password)
                     .type(HikariDataSource.class)
                     .build();
             dataSource.setMaximumPoolSize(maxPoolSize);
