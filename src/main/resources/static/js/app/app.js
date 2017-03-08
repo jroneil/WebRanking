@@ -1,8 +1,12 @@
 var app = angular.module('rankApp',['ui.router','ngStorage']);
-var host = "https://"+window.location.hostname;
+var host = "http://"+window.location.hostname;
+if(host.includes("localhost")){
+	host="http://"+window.location.hostname+":8080";
+	
+}
 app.constant('urls', {
     BASE: host+'/RanksApp',
-    RANK_SERVICE_API : host+':/RanksApp/api/rank/',
+    RANK_SERVICE_API : host+'/RanksApp/api/rank/',
    
 });
 
