@@ -29,7 +29,7 @@ public class RanksRepositoryImpl implements RanksRepositoryCustom{
 		query.setMaxResults(5);
 		
 		List<Ranks> result = query.getResultList();
-		logger.info("RanksRepositoryImpl---------results---"+result.size());
+		logger.info("retrieveTop5Ranks---------results---"+result.size());
 		return result;
 	}
 
@@ -39,9 +39,10 @@ public class RanksRepositoryImpl implements RanksRepositoryCustom{
 		Query query = entityManager.createQuery(sql);
 		query.setParameter("recDate", recDate);
 		query.setFirstResult(0);
-		query.setMaxResults(9);
+		query.setMaxResults(10);
 		List<Ranks> result = query.getResultList();
-		return result;
+		
+		return result;logger.info("retrieveTop10Ranks---------results---"+result.size());
 	}
 
 }
