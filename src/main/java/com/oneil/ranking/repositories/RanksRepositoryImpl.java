@@ -41,8 +41,8 @@ public class RanksRepositoryImpl implements RanksRepositoryCustom{
 		query.setFirstResult(0);
 		query.setMaxResults(10);
 		List<Ranks> result = query.getResultList();
-		
-		return result;logger.info("retrieveTop10Ranks---------results---"+result.size());
+		logger.info("retrieveTop10Ranks---------results---"+result.size());
+		return result;
 	}
 
 }
