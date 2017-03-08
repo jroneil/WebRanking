@@ -21,7 +21,7 @@
 	                    <div class="form-group col-md-12">
 	                        <label class="col-md-2 control-lable" for="lastupdate">Last Update</label>
 	                        <div  id="wrapper" ng-app="app" class="col-md-7">
-	                               <input type="text" ng-model="ctrl.rank.recDate" datepicker placeholder="Enter Website." required />
+	                               <input type="text" ng-model="ctrl.rank.recDate" datepicker placeholder="Enter Last Update." required />
 	                       
 	                            
 	                        </div>
