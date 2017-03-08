@@ -21,8 +21,8 @@ angular.module('rankApp').controller('SearchController',
 
         function submit() {
         	 if (self.rank.recDate === undefined || self.rank.recDate === null) {
-                 console.log('do nothing');
-                 getAllRanks();
+        		 RankService.loadAllRanks();
+                
              } else {
             	 getSearch(self.rank.recDate);
                  console.log('Search ', self.rank.recDate);
