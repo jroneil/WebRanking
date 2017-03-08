@@ -54,9 +54,17 @@ public class RestAPIController {
 	}
 	//get top 10 Ranks
 	@RequestMapping(value= "/rank/top10", produces = MediaType.APPLICATION_JSON_VALUE ,method = RequestMethod.GET)
-	  public Iterable<Ranks> getTop10(HttpServletRequest servletRequest,@RequestParam(value="recDate") Date recDate) {
-	
-		return ranksRepository.retrieveTop10Ranks(recDate);
+	  public Iterable<Ranks> getTop10(HttpServletRequest servletRequest,@RequestParam(value="recDate") String recDate) {
+	     Date date=null;
+		try {
+			date = formatter.parse(recDate);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+       // int visits = Integer.parseInt(webRequest.getParameter("visits"));
+		logger.info("recDate----------------------"+date);
+		return ranksRepository.retrieveTop10Ranks(date);
 	
 	}
   //get all ranks
