@@ -13,11 +13,17 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "ranks")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Ranks implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -33,7 +39,9 @@ public class Ranks implements Serializable {
 
 	protected Ranks() {
 	}
-
+	
+	
+	
 	public Ranks(String website, Date recDate, int visits) {
 		super();
 		this.website = website;
