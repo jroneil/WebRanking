@@ -29,7 +29,7 @@ angular.module('rankApp').controller('UploadController',
         }
 
        
-
+    }
 
 
     ]);
