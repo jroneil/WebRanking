@@ -37,5 +37,6 @@ angular.module('rankApp').factory(
 						});
 						return deferred.promise;
 					}
-
-				} ]);
+				} 
+				
+			]);
