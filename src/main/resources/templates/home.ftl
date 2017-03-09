@@ -1,7 +1,7 @@
 <div class="generic-container">
     <div class="panel panel-default">
         <!-- Default panel contents -->
-        <div class="panel-heading"><span class="lead">Website Rankings </span></div>
+        <div class="panel-heading"><span class="lead">Website Ranks</span></div>
 		<div class="panel-body">
 	        <div class="formcontainer">
 	        <ul>

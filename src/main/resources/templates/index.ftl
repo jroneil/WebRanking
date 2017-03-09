@@ -21,6 +21,8 @@
         <script src="js/app/RankService.js"></script>
         <script src="js/app/RankController.js"></script>
         <script src="js/app/SearchController.js"></script>
+        <script src="js/app/UploadController.js"></script>
+        <script src="js/app/UploadService.js"></script>
         
     </body>
 </html>

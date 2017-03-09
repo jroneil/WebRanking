@@ -1,7 +1,7 @@
 var app = angular.module('rankApp',['ui.router','ngStorage']);
-var host = "https://"+window.location.hostname;
+var host = "http://"+window.location.hostname;
 if(host.includes("localhost")){
-	host="https://"+window.location.hostname+":8080";
+	host="http://"+window.location.hostname+":8080";
 	
 }
 app.constant('urls', {
@@ -20,6 +20,11 @@ app.config(['$stateProvider', '$urlRouterProvider',
             
                
             })
+        .state('upload',{
+            url:'/upload',
+            templateUrl: 'partials/upload',
+                           
+            })    
         .state('top5',{
             url:'/top5',
             templateUrl: 'partials/top5',

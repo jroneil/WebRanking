@@ -1,7 +1,7 @@
 <div class="generic-container">
     <div class="panel panel-default">
         <!-- Default panel contents -->
-        <div class="panel-heading"><span class="lead">Rank </span><span class="floatRight"><a ng-href="/RanksApp/#/home">Home</a></span></div>
+        <div class="panel-heading"><span class="lead">Rank Administration</span><span class="floatRight"><a ng-href="/RanksApp/#/home">Home</a></span></div>
 		<div class="panel-body">
 	        <div class="formcontainer">
 	            <div class="alert alert-success" role="alert" ng-if="ctrl.successMessage">{{ctrl.successMessage}}</div>
